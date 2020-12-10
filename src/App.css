@@ -1,0 +1,55 @@
+.scores {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    background-color: rgb(11, 223, 64);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.player-score {
+    flex: 0 45%;
+    padding: 4px;
+    margin: 4px;
+    text-align: center;
+}
+
+.player-score .statistics {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 8px;
+}
+
+.active {
+    border: 3px solid #4caf50;
+    padding: 1px;
+}
+
+.name {
+    font-size: large;
+}
+
+.score {
+    font-size: xx-large;
+}
+
+.player-turn {
+    padding: 4px;
+    margin: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.player-turn .MuiChip-root span {
+    width: 25px;
+    text-align: center;
+    font-weight: bold;
+}

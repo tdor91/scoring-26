@@ -1,0 +1,44 @@
+.grid-container {
+    margin: 8px 4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 4px 4px;
+    grid-template-areas:
+      ". . . . ."
+      ". . . . ."
+      ". . . . ."
+      ". . . . ."
+      "modifiers modifiers modifiers modifiers modifiers"
+      "specials specials specials specials back";
+}
+
+.grid-container button {
+      height: 52px;
+      width: 100%;
+}
+  
+.specials {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 4px 4px;
+    grid-template-areas:
+      ". . .";
+    grid-area: specials;
+}
+  
+.back {
+    grid-area: back;
+}
+  
+.modifiers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 4px 4px;
+    grid-template-areas:
+      ". .";
+    grid-area: modifiers;
+}
+  
