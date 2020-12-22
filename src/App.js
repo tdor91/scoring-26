@@ -51,13 +51,15 @@ class Match extends React.Component {
     }));
   }
 
-  onScoreReported(value) {
+  onScoreReported(value, modifier) {
+    const points = value * modifier;
+
     const currentPlayer = this.state.currentPlayer;
     const shotHistory = [...this.state.shotHistory, currentPlayer];
     const players = [...this.state.players];
 
     const updatedPlayer = players[currentPlayer];
-    updatedPlayer.history.push(value);
+    updatedPlayer.history.push(points);
 
 
     const remainingScore = this.state.initialScore - updatedPlayer.history.reduce((sum, val) => sum + val, 0);
@@ -121,7 +123,7 @@ class Match extends React.Component {
       <div>
         <PlayerScores players={this.state.players} currentPlayer={this.state.currentPlayer} initialScore={this.state.initialScore} />
         {/* <PlayerTurn values={["123", "0"]} /> */}
-        <ScoreInput next={value => this.onScoreReported(value)} undo={() => this.onUndoScore()} />
+        <ScoreInput next={(value, modifier) => this.onScoreReported(value, modifier)} undo={() => this.onUndoScore()} />
       </div>
     );
   }

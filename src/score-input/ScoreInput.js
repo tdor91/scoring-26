@@ -27,7 +27,7 @@ class ScoreInput extends React.Component {
     }
 
     handleScoreInput = (value, modifier) => {
-        this.props.next(value * modifier);
+        this.props.next(value, modifier);
         this.setModifier(1);
     }
 
