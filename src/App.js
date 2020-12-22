@@ -19,7 +19,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div class="app">
       <Menu onPlayersChanged={handlePlayersChanged} onResetScore={resetScore} />
       <Match playerNames={playerNames} key={gameResetCount} />
     </div>

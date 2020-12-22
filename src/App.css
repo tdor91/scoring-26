@@ -1,3 +1,9 @@
+.app {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .scores {
     display: flex;
     flex-direction: row;
